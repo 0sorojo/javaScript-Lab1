@@ -1,3 +1,7 @@
+// Mitch told us to use "use strict"; from now on
+//"use strict";
+
+//mitch did separate variables instead of an object
 let Lawrence = {
   name: "Lawrence Adams",
   age: 39,
@@ -28,8 +32,10 @@ for (i = 0; i < Lawrence.lifeEvents.length; i++) {
 let counter = 0;
 let randomNumber = 0;
 
+//use while(true)
 while (randomNumber !== 5) {
-  randomNumber = Math.floor(Math.random() * 11);
+  //use 10 + 1 to give random number 1-10 -- * 11 would give a number for 0-10
+  randomNumber = Math.floor(Math.random() * 10 + 1);
   if (randomNumber !== 5) {
     counter++;
     console.log(`${randomNumber} does not equal 5`);
@@ -37,6 +43,7 @@ while (randomNumber !== 5) {
     counter++;
     console.log(
       `${randomNumber} === 5. it took ${counter} iterations to randomly generate the number 5`
+      //break; <-- here
     );
   }
 }
@@ -61,4 +68,4 @@ if (hours > 40) {
 
 let numberOfWeeks = 1000000 / totalPaycheck;
 let rounded = Math.ceil(numberOfWeeks);
-console.log(rounded);
+console.log(`At ${hours}hours and ${wage}wage it will take ${rounded} weeks to make a million dollars`);
